@@ -37,7 +37,7 @@ export default function BookCheckoutPage() {
       setIsLoading(false);
       setHttpError(error.message);
     });
-  });
+  }, []);
 
   if (isLoading) {
     return (
@@ -70,7 +70,7 @@ export default function BookCheckoutPage() {
               <h2>{book?.title}</h2>
               <h5 className="text-primary">{book?.author}</h5>
               <p className="lead">{book?.description}</p>
-              <StarsReview rating={4} size={32}/>
+              <StarsReview rating={2.5} size={32}/>
             </div>
           </div>
         </div>
